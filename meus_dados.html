@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SUS — Meus Dados</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <div style="display:flex;align-items:center">
+        <div class="brand">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect x="1" y="1" width="22" height="22" rx="4" fill="#0B60A6"/>
+            <path d="M7 12h10M12 7v10" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div>
+            <div style="font-size:16px">SUS</div>
+            <div style="font-size:12px;color:var(--muted)">Sistema Único de Saúde — Protótipo</div>
+          </div>
+        </div>
+        <nav style="margin-left:18px">
+          <a href="index.html">Início</a>
+          <a href="meus_dados.html">Meus Dados</a>
+          <a href="#">Contato</a>
+          <a href="#">Sobre</a>
+        </nav>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <a class="badge" href="#">Entrar com gov.br</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="meus-dados-root"></section>
+
+    <section class="card">
+      <h3>Unidades de Saúde próximas</h3>
+      <div id="unidades-list"></div>
+    </section>
+
+    <section class="card">
+      <h3>Ajuda</h3>
+      <p class="meta">Esta página é uma simulação do painel do ConecteSUS. Em produção, faça o login via gov.br para acessar dados reais.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <div class="meta">© SUS — Protótipo • Guilherme</div>
+        <div class="meta">Privacidade • Acessibilidade • Ajuda</div>
+      </div>
+    </div>
+  </footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

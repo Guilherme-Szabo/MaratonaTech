@@ -1,0 +1,118 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SUS — SUSIA (Início)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <div style="display:flex;align-items:center">
+        <div class="brand">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect x="1" y="1" width="22" height="22" rx="4" fill="#0B60A6"/>
+            <path d="M7 12h10M12 7v10" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div>
+            <div style="font-size:16px">SUS</div>
+            <div style="font-size:12px;color:var(--muted)">Sistema Único de Saúde — Protótipo</div>
+          </div>
+        </div>
+        <nav style="margin-left:18px">
+          <a href="index.html">Início</a>
+          <a href="meus_dados.html">Meus Dados</a>
+          <a href="#">Contato</a>
+          <a href="#">Sobre</a>
+        </nav>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <a class="badge" href="#">Entrar com gov.br</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <section class="card">
+        <h2 id="chat">Fale com a <span style="color:var(--primary)">SUSIA</span></h2>
+        <p class="meta">Assistente virtual que ajuda a marcar consultas, encontrar unidades e tirar dúvidas rápidas.</p>
+
+        <div class="chat-wrap" style="margin-top:14px;">
+          <div class="chat">
+            <div class="messages" id="messages" role="log" aria-live="polite"></div>
+
+            <div style="padding:8px 0 0 0">
+              <div class="input-row">
+                <input id="input" placeholder="Digite ou clique no microfone..." aria-label="mensagem"/>
+                <button id="mic" title="Falar" style="border-radius:10px;border:1px solid #e6eef8;padding:10px;background:#fff">🎙️</button>
+                <button id="send" class="btn">Enviar</button>
+              </div>
+
+              <div class="quick" style="margin-top:8px;">
+                <button onclick="quick('Quero marcar uma consulta')">Marcar consulta</button>
+                <button onclick="quick('Onde tem posto de saúde perto de mim?')">Unidades próximas</button>
+                <button onclick="quick('Como renovar minha receita?')">Renovar receita</button>
+              </div>
+            </div>
+          </div>
+
+          <aside class="services card" style="width:320px;">
+            <h3>Meus Serviços</h3>
+            <ul>
+              <li class="service-item"><strong>📅</strong> Consultas agendadas <span style="margin-left:auto;color:var(--muted)">2</span></li>
+              <li class="service-item"><strong>💊</strong> Receitas digitais <span style="margin-left:auto;color:var(--muted)">1 ativa</span></li>
+              <li class="service-item"><strong>💉</strong> Histórico de vacinas <span style="margin-left:auto;color:var(--muted)">2</span></li>
+              <li class="service-item"><strong>🔬</strong> Exames disponíveis <span style="margin-left:auto;color:var(--muted)">3</span></li>
+            </ul>
+
+            <div style="margin-top:12px">
+              <button onclick="location.href='meus_dados.html'" style="width:100%;padding:10px;border-radius:10px;background:var(--primary);color:#fff;border:none;cursor:pointer">Ver Meus Dados</button>
+            </div>
+
+            <div style="margin-top:14px">
+              <h4>Mapa da Saúde</h4>
+              <div class="map-placeholder">Mapa interativo (permita localização)</div>
+              <div style="margin-top:8px;font-size:13px;color:var(--muted)"><strong>Unidades próximas</strong><div id="unidades-list" style="margin-top:6px"></div></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card" style="margin-bottom:12px;">
+          <h3>Conheça a SUSIA</h3>
+          <p class="meta">SUSIA é a assistente virtual do SUS que usa linguagem natural para orientar, conectar e lembrar suas consultas.</p>
+          <div style="margin-top:10px; display:flex; gap:8px;">
+            <button style="padding:8px;border-radius:8px;border:1px solid #e6eef8;background:#fff" onclick="alert('SUSIA entende linguagem natural e pode agendar consultas em integração com ConecteSUS.')">Como funciona</button>
+            <button style="padding:8px;border-radius:8px;background:var(--primary);color:#fff;border:none" onclick="location.href='index.html#chat'">Fale com a SUSIA</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>Divulgação</h4>
+          <p class="meta">QR Codes em postos de saúde e campanhas nas redes ajudam a aumentar o conhecimento do site.</p>
+        </div>
+      </aside>
+    </div>
+
+    <section style="margin-top:18px" class="card">
+      <h3>Simulação de Ações</h3>
+      <p class="meta">No chat, tente escrever: "Quero marcar uma consulta" ou "Onde fica UBS Centro". O protótipo responde com ações simuladas.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <div class="meta">© SUS — Protótipo • Guilherme</div>
+        <div class="meta">Privacidade • Acessibilidade • Ajuda</div>
+      </div>
+    </div>
+  </footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

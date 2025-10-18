@@ -1,0 +1,41 @@
+
+:root{
+  --bg:#f0f7fb; --card:#ffffff; --primary:#0B60A6; --muted:#65748b; --radius:14px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; margin:0; background:var(--bg); color:#0f1724}
+.header{background:var(--card); box-shadow:0 2px 10px rgba(11,96,166,0.06); padding:16px 20px; position:sticky; top:0; z-index:20}
+.container{max-width:1100px; margin:20px auto; padding:0 18px;}
+.brand{display:flex; align-items:center; gap:12px; font-weight:700; color:var(--primary)}
+nav a{margin-right:14px; color:var(--muted); text-decoration:none; font-size:14px}
+.grid{display:grid; grid-template-columns:1fr 340px; gap:18px}
+.card{background:var(--card); border-radius:var(--radius); padding:18px; box-shadow:0 6px 20px rgba(15,23,36,0.03); margin-bottom:18px;}
+h1,h2,h3{margin:0 0 12px 0}
+.meta{font-size:13px; color:var(--muted)}
+.chat-wrap{display:flex; gap:18px}
+.chat{flex:1; display:flex; flex-direction:column; min-height:480px}
+.messages{flex:1; overflow:auto; padding:12px; display:flex; flex-direction:column; gap:10px}
+.msg{max-width:78%; padding:10px 12px; border-radius:12px}
+.susia{align-self:flex-start; background:linear-gradient(180deg,#f8fbff,#ffffff); border:1px solid #e6f0fb}
+.user{align-self:flex-end; background:var(--primary); color:#fff}
+.input-row{display:flex; gap:8px; margin-top:12px}
+.input-row input{flex:1; padding:12px; border-radius:10px; border:1px solid #e6eef8}
+.btn{background:var(--primary); color:#fff; border:none; padding:10px 12px; border-radius:10px; cursor:pointer}
+.quick{display:flex; gap:8px; margin-top:12px}
+.quick button{padding:8px 10px; border-radius:8px; border:1px solid #e6eef8; background:#fff; cursor:pointer}
+.services ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px}
+.service-item{display:flex; gap:10px; align-items:center; color:var(--muted)}
+.map-placeholder{height:180px; background:linear-gradient(90deg,#f3f6fb,#eef5fb); border-radius:10px; display:flex; align-items:center; justify-content:center; color:#7b8da4}
+.footer{max-width:1100px; margin:18px auto; padding:18px 20px; color:var(--muted); font-size:13px}
+
+/* meus dados styles */
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef7ff;color:var(--primary);font-weight:600}
+.data-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.data-card{background:#fff;border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(15,23,36,0.03)}
+
+/* responsive */
+@media (max-width:960px){
+  .grid{grid-template-columns:1fr}
+  .data-grid{grid-template-columns:1fr}
+  .container{margin:12px auto}
+}
